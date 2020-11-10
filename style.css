@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1024px;
+}
+
+nav {
+    margin-bottom: 10vh;
+}
+
+.logo {
+    width: 160px;
+    height: auto; 
+}
+
+.container {
+    height: 100%;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.nav-link:hover, .nav-link:focus  {
+    text-decoration: underline;
+}
+
+.navbar-nav li {
+    margin: 0 10px;
+}
+
+.navbar-nav li.item-subscribe {
+    margin-left: 20px;
+}
+
+.btn-filie {
+    color: white;
+    background-color: rgb(26, 100, 87) !important;
+}
+
+.frame1 {
+    padding-top: 50px;
+    height: 100vh;
+    background: url(wireframe1.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    max-height: 800px;
+    min-height: 800px;
+}
+
+.frame2 {
+    height: 100vh;
+    background: url(wireframe2.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-y: center;
+    background-position-x: 35%;
+    background-color: rgb(209, 253, 231);
+    max-height: 700px;
+    min-height: 700px;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(26, 100, 87);
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}

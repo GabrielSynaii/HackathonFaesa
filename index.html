@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>GreenData</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-white" style="padding: 0 20vw; border-bottom: 1px solid #ccc">
+        <a class="navbar-brand" href="#!">
+            <img src="./logo.png" class="logo py-3 px-2 shadow-sm p-2 bg-white rounded"/>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-end bg-black">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">SOBRE<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">SERVIÇOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#dados">DADOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#prototipo">PROTÓTIPO</a>
+                </li>
+                <li class="nav-item item-subscribe">
+                    <button class="btn btn-success btn-filie py-2 px-4 my-sm-0">FILIE-SE</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="frame1" id="sobre">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-3 ml-5 px-4">
+                    <h3>QUEM SOMOS?</h3>
+                    <p class="text-left pr-2">Somos uma equipe focada em processamento e análise de áreas ambientais.</p>
+                </div>
+
+                <div class="col-4 align-self-end text-white" style="background-color: #90bdb3;">
+                    <p class="text-center my-auto px-4 py-2">Tecnologia de ponta-a-ponta para o melhor processamento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="frame2" id="servicos">
+        <div class="container pt-5">
+            <div class="row justify-content-end">
+                <div class="col ml-5 px-3">
+                    <h3 class="text-center">O QUE FAZEMOS?</h3>
+                </div>
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-3 my-2 text-white" style="background-color: #90bdb3;">
+                    <p class="text-center my-auto px-4 py-2">Análise da área florestal com Machine Learning</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-3 my-2 text-white" style="background-color: #90bdb3;">
+                  <p class="text-center my-auto px-4 py-2">Por meio da Retroalimentação nossa I.A te garante cada vez mais precisão</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-3 my-2 text-white" style="background-color: #90bdb3;">
+                    <p class="text-center my-auto px-4 py-2">Separação e organização dos dados para facilitar a sua visualização</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="frame3" id="dados">
+        <div class="container pt-5">
+            <h3>DESMATAMENTO</h3>
+            <p class="pb-3">O desmatamento pode contribuir para a intensificação do efeito estufa. Isso ocorre pelo fato de as árvores serem uma das responsáveis pela absorção do CO2, um dos gases que intensificam o efeito estufa, além disso, as queimadas, um dos processos utilizados no desmatamento, liberam CO2 na atmosfera. As árvores também contribuem com o aumento da umidade do ar, controlando o regime de chuvas de determinadas regiões. Assim, a sua retirada influencia no ciclo hidrológico.</p>
+
+            <img src="giphy.gif" class="img-fluid" style="width: 100%; height: 360px;"/>
+            <p class="text-center pt-1">(Mato Grosso Animation GIF By European Space Agency - ESA)</p>
+            
+            <p class="py-3">Mato Grosso manteve sua posição como segundo estado que mais desmata a floresta amazônica em território brasileiro, atrás apenas do Pará. Foram 1.880 km² de áreas com alertas de desmatamento entre agosto de 2019 e julho de 2020 na região mato-grossense do bioma, um aumento de 31% em relação ao mesmo período entre 2018 e 2019, quando registrou 1.436 km².</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="frame4" id="prototipo">
+        <div class="container py-5">
+            <h3 class="text-center">TESTE JÁ</h3>
+            <p class="text-center">Arraste para cá uma foto e deixe que nossa I.A raciocine para você<p>
+        
+		    <div class="row my-4">
+                <div class="col">
+                    <input type="file" id="img_uploader" accept="image/*"/>
+                </div>
+            </div>
+
+            <div>
+                Filtrar por:
+                <input type="checkbox" name="filtro" id="check_desmat" checked>
+                <label for="check_desmat">Desmatamento</label>
+                <input type="checkbox" name="filtro" id="check_queim" checked>
+                <label for="check_queim">Queimadas</label>
+            </div>
+
+            <div id="map"></div>
+            <p class="pt-3" id="contador"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row pt-5">
+                <div class="col">
+                    <p class="text-center">Este protótipo só foi possível com a ajuda da API Teachable Machine da Google.</p>
+                    <p class="text-center">Ícones feitos pela Freepik retirados do site <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap&zoom=300x400&key=AIzaSyBoazMlVlmlgaPuv56ekU-90mlTKVPrgJ8"></script>
+    <script>toastr.options={closeButton:!0,debug:!1,newestOnTop:!1,progressBar:!0,positionClass:"toast-bottom-center",preventDuplicates:!1,onclick:null,showDuration:"300",hideDuration:"1000",timeOut:"10000",extendedTimeOut:"3000",showEasing:"swing",hideEasing:"linear",showMethod:"fadeIn",hideMethod:"fadeOut"};const URL="https://teachablemachine.withgoogle.com/models/3Dh2yX91u/",icon_fire="fire32.png",icon="icon32.png";let model,webcam,labelContainer,maxPredictions,file,map,request=!1,markers=[];async function init_ai(){const o=URL+"model.json",e=URL+"metadata.json";console.log("start await"),model=await tmImage.load(o,e),console.log("acabou await"),maxPredictions=model.getTotalClasses(),console.log(maxPredictions);var t=document.createElement("img");t.crossOrigin="anonymous",t.src=file.src,console.log("startou delay");setTimeout(function(){console.log("startou await2");let o=model.predict(t,!1);console.log("finalizou await2"),o.then(function(o){console.log(o);let e=0;for(let t=0;t<o.length;t++)o[t].probability>o[e].probability&&(e=t);switch(toastr.remove(),o[e].className){case"Desmatamento":showPosition(icon),toastr.options.timeOut=1e4,toastr.warning("A imagem enviada contém "+o[e].className + "!"),toastr.options.timeOut=3e3,toastr.info(" A localização atual foi marcada no mapa.");break;case"Queimadas":showPosition(icon_fire),toastr.options.timeOut=1e4,toastr.error("A imagem enviada contém "+o[e].className + "!"),toastr.options.timeOut=3e3,toastr.info(" A localização atual foi marcada no mapa.");break;case"Florestamento":toastr.success("O local da imagem enviada está conservado.");break;default:toastr.info("Não foi encontrado nenhum problema na imagem!")}})},2e3)}function selectMarkers(){$("#map_title").text()}function updateCont(){$("#contador").text("Pontos com desmatamento detectados: "+markers.length)}function showPosition(o){navigator.geolocation?navigator.geolocation.getCurrentPosition(function(e){addMarker(e.coords.latitude,e.coords.longitude,o)}):alert("Desculpa, seu navegador não suporta a geolocalização do HTML5!")}function initMap(){console.log("initMap");var o=document.getElementById("map"),e={zoom:3,center:{lat:-15.7801,lng:-47.9292},mapTypeId:"satellite"};map=new google.maps.Map(o,e);let t=[{pos:{lat:-3.6576,lng:-54.8193},icon:icon},{pos:{lat:3.6311803,lng:-60.6216444},icon:icon},{pos:{lat:5.3960185,lng:-62.6811647},icon:icon},{pos:{lat:-.8615,lng:-59.6036},icon:icon_fire},{pos:{lat:-1.6777,lng:-56.4493},icon:icon}];for(let o=0;o<t.length;o++)markers.push(new google.maps.Marker({map:map,position:t[o].pos,icon:t[o].icon})),google.maps.event.addListener(markers[o],"dblclick",function(e){map.setCenter(markers[o].getPosition()),map.setZoom(16)});updateCont()}function addMarker(o,e,t=icon){console.log("add marker");let a=new google.maps.Marker({map:map,position:{lat:o,lng:e},icon:t});markers.push(a),map.setCenter(a.getPosition()),map.setZoom(6),google.maps.event.addListener(a,"dblclick",function(o){map.setCenter(a.getPosition()),map.setZoom(20)}),updateCont(),$("#img_uploader").val("")}function analyseImage(o){(console.log("analyse"),o.files&&o.files[0])&&(new FileReader).readAsDataURL(o.files[0])}function zoomIn(){map.setZoom(17)}$(document).ready(function(){$(".nav-link").on("click",function(){const o=$(this).attr("href");$("html, body").animate({scrollTop:$(o).offset().top-100},"slow")}),$("#img_uploader").change(function(){toastr.remove(),toastr.options.timeOut=0,toastr.info("A imagem está sendo processada..."),init_ai(),(file=$("#img_uploader")[0].files[0]).src=window.URL.createObjectURL(this.files[0])}),$(document).change('input[type="checkbox"]',function(o){let e=$("#check_queim:checked").length>0,t=$("#check_desmat:checked").length>0;for(let o=0;o<markers.length;o++)markers[o].icon===icon_fire?e?markers[o].setMap(map):markers[o].setMap(null):t?markers[o].setMap(map):markers[o].setMap(null)}),$(".nav-link")[0].click()});</script>
+</body>
+</html>
+   
